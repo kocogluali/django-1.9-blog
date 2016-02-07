@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block slider %}
+    <h1 style="font-size: x-large; color: #006699">{{ objects.title }}</h1>
+{% endblock slider %}
+{% block content %}
+<article>
+    <div class="content">
+        <img src='{{ objects.image.url }}' width="98%" height="50%"/><br>
+        <p class="info"> >>> {{ objects.user }} - {{ objects.published | date }} - {{ objects.category }}</p><br>
+        <p id="p-detay-baslik"><b>{{ objects.title }}</b></p><br>
+        <p>{{ objects.content | linebreaks  }}</p><br>
+        <p><small><i>0 Comments</i></small></p>
+    </div>
+</article>
+{% endblock content %}

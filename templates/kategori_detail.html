@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block slider %}
+{% endblock slider %}
+{% block content %}
+    {% for obj in obje %}
+        <article>
+                    <div class="heading">
+                        <h2><a href="{{ obj.get_absolute_url }}">{{ obj.title }}</a></h2>
+                        <p class="info">>>> {{ obj.user }} - {{ obj.published | date }}</p>
+                    </div>
+                    <div class="content">
+                        <a href="{{ obj.get_absolute_url }}">
+                            <img src='{{ obj.image.url }}' id="img-all-post"/>
+                        </a>
+                        <p> {{ obj.content | linebreaks | truncatewords:70 }}</p>
+                    </div>
+                    <div class="footer">
+                        <p class="more">
+                            <a class="button" id="devamini-oku" href="{{ obj.get_absolute_url }}">Devamını oku >></a>
+                        </p>
+                    </div>
+        </article>
+    {% endfor %}
+{% endblock content %}

@@ -1,0 +1,57 @@
+#li-break{
+    color: #000000;
+}
+#li-break:hover{
+    color: #000000;
+    background: #006699 url('../images/lines2.png');
+}
+#img-main-menu, #img-all-post{
+    height: 150px;
+    width: 270px
+}
+#p-detay-baslik{
+    font-size: medium;
+    font-style: italic;
+}
+#devamini-oku{
+    color: #006699;
+    background-color: #ffffff;
+}
+#devamini-oku:hover{
+    color: #ffffff;
+    background-color: #006699;
+}
+.ayrac{
+    margin: 25px 0 25px 60%;
+    border: 1px solid #BDBDBD;
+}
+#kategori_title, #kategori_title a{
+    background-color: #cc1414;
+    color: #ffffff;
+}
+#kategori_title{
+    height: 40px;
+    text-align: left;
+    line-height: 40px;
+    font-size: 15px;
+}
+#kategori_tit{
+    color: #ffffff;
+}
+#sosyal{
+    height: 30px;
+}
+#sosyal ul li{
+    padding: 0;
+    width: 31px;
+    height: auto;
+    display: block;
+    float: left;
+    margin-right: 4px;
+    margin-bottom: 1px;
+}
+#sosyal ul li img{
+    border: none;
+    width: 40px;
+    height: 35px;
+}

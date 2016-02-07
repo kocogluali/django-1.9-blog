@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block slider %}
+{% endblock %}
+{% block content %}
+    {% for obj in objects %}
+    <div class="sidebar col05">
+        <section>
+            <a href="detail/{{ obj.id }}">
+                <div class="heading" id="kategori_title">
+                    <b>{{ obj.name | upper }}</b>
+                </div>
+            </a>
+        </section>
+    </div>
+    {% endfor %}
+{% endblock %}
+{% block Categories %}
+    <section>
+        <div class="heading">Categories</div>
+        <div class="content">
+            <ul class="list">
+            {% for obj in categories %}
+                <li><a href="detail/{{ obj.id }}">{{ obj.name }}</a></li>
+            {% endfor %}
+            <li><a href=""><i style="color: #006699">tümünü gör ...</i></a></li>
+            </ul>
+        </div>
+    </section>
+{% endblock Categories %}
+
