@@ -53,5 +53,7 @@ def category_detail(request, id):
     context = {
         "objects": query,
         "obje": query_post,
+        "populer": query_populer,
+        "categories":query_kategori,
     }
     return render(request, "kategori_detail.html", context)
