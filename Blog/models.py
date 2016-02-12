@@ -1,8 +1,12 @@
+# coding=utf-8
 from __future__ import unicode_literals
 
 from django.conf import settings
 from django.core.urlresolvers import reverse
 from django.db import models
+from django.db.models.signals import pre_save
+from django.template.defaultfilters import slugify
+from django.dispatch import receiver
 
 
 class Category(models.Model):
