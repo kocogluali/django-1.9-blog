@@ -21,7 +21,7 @@ def allposts(request):
     context = {
         "objects": query,
         "populer": query_populer,
-        "categories":query_kategori,
+        "categories": query_kategori,
     }
     return render(request, "allposts.html", context)
 
@@ -42,7 +42,7 @@ def categories(request):
     context = {
         "objects": query,
         "populer": query_populer,
-        "categories":query_kategori,
+        "categories": query_kategori,
     }
     return render(request, "kategoriler.html", context)
 
@@ -53,5 +53,7 @@ def category_detail(request, id):
     context = {
         "objects": query,
         "obje": query_post,
+        "populer": query_populer,
+        "categories": query_kategori,
     }
     return render(request, "kategori_detail.html", context)
