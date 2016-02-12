@@ -1,5 +1,5 @@
-## django ile 2. blog 
---------------- 
+python django 1.9 ile blog  sitesi
+--------------------------
 
 | kullanıcı adı: l50 
 --------------- 

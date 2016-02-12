@@ -52,8 +52,6 @@ def category_detail(request, id):
     query_post = Post.objects.all().filter(category_id=id)
     context = {
         "objects": query,
-        "obje": query_post,        
-        "categories": query_kategori,
-        "populer": query_populer,
+        "obje": query_post,
     }
     return render(request, "kategori_detail.html", context)
