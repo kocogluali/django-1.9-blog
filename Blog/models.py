@@ -15,6 +15,10 @@ class Category(models.Model):
     def __unicode__(self):
         return self.name
 
+    class Meta:
+        verbose_name = "Kategori"
+        verbose_name_plural = "Kategoriler"
+
 
 class Post(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, default=1)
@@ -30,3 +34,19 @@ class Post(models.Model):
 
     def get_absolute_url(self):
         return reverse('blog:detail', kwargs={"id": self.id})
+
+    class Meta:
+        verbose_name = "Yazı"
+        verbose_name_plural = "Yazılar"
+
+
+class AboutAndContact(models.Model):
+    about = models.TextField("Hakkımızda")
+    contact = models.TextField("İletişim")
+
+    def __unicode__(self):
+       return "Hakkımızda ve İletişim"
+
+    class Meta:
+        verbose_name = "Hakkımızda ve İletişim"
+        verbose_name_plural = "Hakkımızda ve İletişim"

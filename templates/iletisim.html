@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}İletişim | Blog{% endblock %}
+{% block popular %}{% endblock %}
+{% block Categories %}{% endblock %}
+{% block slider %}{% endblock %}
+{% block AboutUs %}{% endblock %}
+
+{% block content %}
+    {% for obj in objects %}
+        <p>{{ obj.contact }}</p>
+    {% endfor %}
+{% endblock %}

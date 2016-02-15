@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 
-from Blog.models import Post, Category
+from Blog.models import Post, Category, AboutAndContact
 
 query_populer = Post.objects.order_by("updated")[:3]
 query_kategori = Category.objects.all()[:5]
@@ -57,3 +57,19 @@ def category_detail(request, id):
         "categories": query_kategori,
     }
     return render(request, "kategori_detail.html", context)
+
+
+def iletisim(request):
+    query = AboutAndContact.objects.all()
+    context = {
+        "objects": query
+    }
+    return render(request, "iletisim.html", context)
+
+
+def hakkinda(request):
+    query = AboutAndContact.objects.all()
+    context = {
+        "objects": query
+    }
+    return render(request, "hakkinda.html", context)
