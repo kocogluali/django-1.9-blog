@@ -45,8 +45,8 @@ class AboutAndContact(models.Model):
     contact = models.TextField("İletişim")
 
     def __unicode__(self):
-       return "Hakkımızda ve İletişim"
+       return "Bilgiler"
 
     class Meta:
-        verbose_name = "Hakkımızda ve İletişim"
-        verbose_name_plural = "Hakkımızda ve İletişim"
+        verbose_name = "Bilgi"
+        verbose_name_plural = "Bilgiler"
